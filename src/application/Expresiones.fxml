@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.SepiaTone?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="paneFondo" fx:id="paneFondo" prefHeight="512.0" prefWidth="704.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ExpresionesController">
+   <children>
+      <Label id="levelField" fx:id="levelField" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="1.0" layoutX="10.0" layoutY="28.0" prefHeight="88.0" prefWidth="704.0" scaleShape="false" style="-fx-background-color: #daeab3;" text="Expresiones Regulares" textAlignment="JUSTIFY" textOverrun="WORD_ELLIPSIS" underline="true">
+         <font>
+            <Font name="Consolas Bold" size="35.0" />
+         </font>
+      </Label>
+      <Button id="btn_evaluar" fx:id="btn_evaluar" cacheShape="false" centerShape="false" focusTraversable="false" graphicTextGap="5.0" layoutX="119.0" layoutY="248.0" mnemonicParsing="false" onAction="#btn_evaluar_click" prefHeight="48.0" prefWidth="189.0" scaleShape="false" style="-fx-background-color: #cce68a; -fx-border-color: black;" text="Evaluar" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="17.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <TextField id="expresion_text" fx:id="expresion_text" layoutX="68.0" layoutY="176.0" prefHeight="38.0" prefWidth="594.0" />
+      <Label layoutX="68.0" layoutY="139.0" text="Ingrese la Expresión Regular que desee evaluar:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button id="btn_grafico" fx:id="btn_grafico" cacheShape="false" centerShape="false" focusTraversable="false" layoutX="404.0" layoutY="248.0" mnemonicParsing="false" onAction="#btn_grafico_click" prefHeight="48.0" prefWidth="189.0" scaleShape="false" style="-fx-background-color: #cce68a; -fx-border-color: black;" text="Cargar Gráfico" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="17.0" />
+         </font>
+         <effect>
+            <SepiaTone />
+         </effect>
+      </Button>
+      <VBox layoutX="58.0" layoutY="305.0" prefHeight="38.0" prefWidth="606.0">
+         <children>
+            <Label id="evaluar_label" fx:id="evaluar_label" prefHeight="36.0" prefWidth="600.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox id="v_box" fx:id="v_box" layoutX="75.0" layoutY="341.0" prefHeight="138.0" prefWidth="588.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="129.0" text="El lenguaje generado:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <AnchorPane id="pane_lenguaje" fx:id="pane_lenguaje" prefHeight="100.0" prefWidth="588.0">
+               <children>
+                  <ImageView id="lenguaje_image" fx:id="lenguaje_image" fitHeight="88.0" fitWidth="588.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

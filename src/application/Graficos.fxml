@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="paneFondoExpresiones" prefHeight="518.0" prefWidth="928.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.GraficoController">
+   <children>
+      <Label id="levelField" alignment="CENTER" cacheShape="false" centerShape="false" contentDisplay="CENTER" focusTraversable="false" layoutX="32.0" layoutY="28.0" prefHeight="88.0" prefWidth="855.0" scaleShape="false" style="-fx-background-color: white;" text="Expresiones Regulares" textAlignment="JUSTIFY" textOverrun="WORD_ELLIPSIS">
+         <font>
+            <Font name="Consolas Bold" size="27.0" />
+         </font>
+      </Label>
+      <AnchorPane id="pane_image" fx:id="pane_image" layoutX="34.0" layoutY="153.0" onMouseMoved="#setImage" prefHeight="318.0" prefWidth="855.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView id="automata_image" fx:id="automata_image" fitHeight="318.0" fitWidth="855.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
